@@ -100,13 +100,11 @@ nav{
     text-align: center;
 }
 
-input[type="radio"]:checked ~ *{
-    color: green;
-    border-color: green;
-    background-color: #FFFFFF;
-}
-
 .sumir{
     opacity: 0;
     transition: all ease-in-out 500ms;
+}
+
+.centralizar{
+    max-width: 35em;
 }

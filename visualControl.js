@@ -5,6 +5,7 @@ let formFileEl = document.querySelector("#formFile");
 let formContainerEl = document.querySelector("#load");
 let instrucaoEl = document.querySelector("#instrucao");
 let testeBackboneEl = document.querySelector("#teste-backbone");
+
 let formBackboneSimEl = document.querySelector("#sim");
 let formBackboneNaoEl = document.querySelector("#nao");
 let formAndarEl = document.querySelector("#andar");
@@ -12,9 +13,17 @@ let formCatEl = document.querySelector("#cat");
 let formFibraEl = document.querySelector("#fibra");
 let formNFibraEl = document.querySelector("#nfibra");
 
+let predioEl = document.querySelector("#predio");
+let formAlturaEl = document.querySelector("#altura");
+let formPontosEl = document.querySelector("#pontos");
+let formMhEL = document.querySelector("#mh");
+let botaoSalvarEl = document.querySelector("#salvar");
+
+let andares = document.querySelectorAll(".andarP");
+
 let pagina = 1;
 
-let predios = [];
+let predio;
 function Predio (){
     rack = [
         {
@@ -61,10 +70,13 @@ function proxPagina(){
     if(pagina==2){
         nextEl.style.transform = "translateY(0vh)";
     }
+    if(pagina==3){
+        montaPredio();
+    }
 }
 
 function novoPredio(){
-    predios.push(new Predio());
+    predio = new Predio();
     formContainerEl.style.display = "none";
     proxPagina();
 }
@@ -73,7 +85,39 @@ function revela(){
     testeBackboneEl.classList.toggle("sumir");
 }
 
+function montaPredio(){
+    predio.andares = formAndarEl.value;
+    for(let i = 1; i <= predio.andares; i++){
+        let newLabel = document.createElement("label");
+        let newInput = document.createElement("input");
+        newInput.setAttribute("type", "radio");
+        newInput.setAttribute("name", "andar");
+        newInput.setAttribute("id",`andar-${i}`);
+        newLabel.classList.add("andarP");
+
+        newLabel.innerText = `Andar ${i}`;
+        newLabel.appendChild(newInput);
+        predioEl.appendChild(newLabel);
+    }
+    for(andarEl in andares){
+        andarEl.firstChild.addEventListener('change', (e)=>{
+            let idEl = e.id;
+            id = idEl.split("-")[1];
+        })
+    }
+}
+
+let id = 0;
+
+function salvaAndar(){
+    if(id = 0){
+
+    }
+
+}
+
 botaoAddEl.addEventListener('click', novoPredio);
 formBackboneSimEl.addEventListener('change', revela);
 formBackboneNaoEl.addEventListener('change', revela);
 nextEl.addEventListener('click', proxPagina);
+botaoSalvarEl.addEventListener("click", salvaAndar);

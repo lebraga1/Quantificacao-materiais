@@ -37,9 +37,9 @@
                         <img src="imgs/architectureicon2.png" alt="" id="building">
                     </div>
                     <div class="col form">
-                        <label for="andar">Número de andares:</label>
+                        <label for="andar" class="d-block">Número de andares:</label>
                         <input type="number"  id="andar" placeholder="1">
-                        <label for="cat">Categoria do cabo:</label>
+                        <label for="cat" class="d-block">Categoria do cabo:</label>
                         <input type="text" id="cat" placeholder="Cat. 5e">
 
                         <label class="d-block">Backbone?</label>
@@ -67,11 +67,20 @@
                     </div>
                 </div>
                 <div class="slide tres row">
-                    <div class="col d-flex justify-content-center flex-column">
-                        <label class="andarP"><span>TODOS ANDARES:</span><input type="radio" name="andar" id="todos"></label>
-                        <label class="andarP"><input type="radio" name="andar" id="andar1">1 Andar </label>
+                    <div class="col d-flex justify-content-center flex-column" id="predio">
+                        <label class="andarP"><span>TODOS ANDARES:</span><input type="radio" name="andar" id="andar-0"></label>
                     </div>
-                    <div class="col"></div>
+                    <div class="col form d-flex align-items-center flex-column">
+                        <div class="centralizar">
+                            <label for="pontos" class="d-block">Altura do andar (m):</label>
+                            <input type="number"  id="altura" placeholder="5">
+                            <label for="pontos" class="d-block">Número de pontos:</label>
+                            <input type="number"  id="pontos" placeholder="90">
+                            <label for="pontos" class="d-block">Medida média Malha Horizontal:</label>
+                            <input type="number"  id="mh" placeholder="10">
+                            <input type="button" value="SALVAR" id="salvar" class="d-block">
+                        </div>
+                    </div>
                 </div>
                 <div class="slide quatro">
 
