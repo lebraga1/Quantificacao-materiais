@@ -52,7 +52,7 @@
 
                         <div id="teste-backbone" class="sumir">
                             <label for="fibra" class="d-block">Tipo de fibra:</label>
-                            <input type="text" id="fibra" placeholder="">
+                            <input type="text" id="fibra" placeholder="MM - 50 x 125µm">
                             <label for="nfibra" class="d-block">Número de fibras:</label>
                             <input type="text" id="nfibra" placeholder="8">
 
@@ -67,8 +67,13 @@
                     </div>
                 </div>
                 <div class="slide tres row">
-                    <div class="col d-flex justify-content-center flex-column" id="predio">
-                        <label class="andarP"><span>TODOS ANDARES:</span><input type="radio" name="andar" id="andar-0"></label>
+                    <div class="col d-flex justify-content-center flex-column" id="wrapper-predio">
+                        <div id="predio" class="col d-flex flex-column">
+                            <div class="andarP">
+                                <input type="radio" name="andar" id="andar-0" checked>
+                                <label for="andar-0">TODOS ANDARES</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="col form d-flex align-items-center flex-column">
                         <div class="centralizar">
@@ -77,16 +82,80 @@
                             <label for="pontos" class="d-block">Número de pontos:</label>
                             <input type="number"  id="pontos" placeholder="90">
                             <label for="pontos" class="d-block">Medida média Malha Horizontal:</label>
-                            <input type="number"  id="mh" placeholder="10">
+                            <input type="number" id="m-h" placeholder="10">
                             <input type="button" value="SALVAR" id="salvar" class="d-block">
                         </div>
                     </div>
                 </div>
                 <div class="slide quatro">
-
-                </div>
-                <div class="slide cinco">
-
+                    <div class="row materiais">
+                        <div class="col item">
+                            <div>Cabo par trançado</div>
+                            <div>Tomada RJ45 Fêmea</div>
+                            <div>Espelhos 4x4 - 2 furações/entradas</div>
+                            <div>Patch Cord, azul, 3m</div>
+                            <div>Patch Panel, 24 portas (PPMH - Patch de Malha Horizontal)</div>
+                            <div>Organizador de cabo frontal - 1U</div>
+                            <div>Patch Cable, azul - 2,5m</div>
+                            <div>Rack fechado, largura de 19"</div>
+                            <div>Bandeja fixa</div>
+                            <div>Exaustor 19"</div>
+                            <div>Switch</div>
+                            <div>Cabo de Fibra Óptica Tight Buffer (FOMMIG)</div>
+                            <div>Chassi DIO (Distribuido Interno Óptico) com 24 portas - 1U - 19"</div>
+                            <div>Acoplador óptico - LC - duplo</div>
+                            <div>Bandeja para emenda de fibra no DIO - (comporta até 12 emendas)</div>
+                            <div>Terminador Óptico para 8 fibras</div>
+                            <div>Pig tail - 1,5m - simples - conector LC</div>
+                            <div>Pig tail - 3,0m - duplo - conector LC</div>
+                            <div>Cordão Óptico- 3m - duplo - conector LC</div>
+                            <div>Rack fechado, largura de 19"</div>
+                            <div>Switch Óptico</div>
+                            <div>Etiquetas de identficação da porta do Patch Panel</div>
+                            <div>Etiquetas de identficação Patch Cable</div>
+                            <div>Etiquetas de identficação do Patch Panel</div>
+                            <div>Etiquetas de identificação Tomadas e Espelhos</div>
+                            <div>Etiquetas de identificação Cabos UTP - MH</div>
+                            <div>Etiqueta para os cordões ópticos e pigtail´s (TO)</div>
+                            <div>Etiqueta para Portas do DIO</div>
+                            <div>Abraçadeiras plásticas, pacote 100 unidades</div>
+                            <div>Porca Gaiola - pacote com 10 unidades</div>
+                            <div>Filtro de Linha - 6 portas</div>
+                        </div>
+                        <div class="col resultado">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,7 +166,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
-        <script src="visualControl.js"></script>
+    <script type="module" src="js/visualControl.js"></script>
 </body>
 
 </html>

@@ -20,6 +20,7 @@ footer{
     background-color: #000000;
 }
 
+
 nav{
     background-color: #00000059;
 }
@@ -94,10 +95,25 @@ nav{
     margin-right: 1em;
 }
 
-.andarP {
-    padding: 1em;
+.andarP label {
     border: #FFFFFF 2px solid;
+    height: 100%;
+    width: 100%;
+    padding: 1em;
     text-align: center;
+}
+
+.andarP label:hover {
+    cursor: pointer;
+}
+
+.andarP input{
+    display: none;
+}
+
+.andarP input:checked + label {
+    color: green;
+    border-color: green;
 }
 
 .sumir{
@@ -107,4 +123,19 @@ nav{
 
 .centralizar{
     max-width: 35em;
+}
+
+#predio{
+    max-height: 70vh;
+    overflow-y: auto;
+}
+#rack{
+    max-width: 30vw;
+}
+#racks{
+    max-width: 3em;
+}
+
+.materiais{
+    background-color: #FFFFFF;
 }
