@@ -59,12 +59,9 @@ let predioTeste = {
     "fibra": "MM - 50 x 125µm",
     "n_fibras": "8"
 }
-calcula(predioTeste);
 
 let predio = {
-    itensAndares:[{
-        rack : {}
-    }],
+    total: {},
     andares : "",
     mh : [],
     pontos : [],
