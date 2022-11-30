@@ -24,7 +24,7 @@
             </h1>
             <div class="flex-column" id="load">
                 <label for="formFile" class="form-label">Carregar um projeto:</label>
-                <input class="form-control" type="file" id="formFile"  accept=".json">
+                <input class="form-control" type="file" id="formFile" accept=".json">
             </div>
         </nav>
         <section id="interface" class="col d-flex flex-column">
@@ -38,12 +38,12 @@
                     </div>
                     <div class="col form">
                         <label for="andar" class="d-block">Número de andares:</label>
-                        <input type="number"  id="andar" placeholder="1">
+                        <input type="number" id="andar" placeholder="1" min="1">
                         <label for="cat" class="d-block">Categoria do cabo:</label>
                         <input type="text" id="cat" placeholder="Cat. 5e">
 
                         <label class="d-block">Backbone?</label>
-                        
+
                         <input type="radio" value="true" name="backbone" id="sim">
                         <label for="sim">Sim</label>
 
@@ -54,15 +54,21 @@
                             <label for="fibra" class="d-block">Tipo de fibra:</label>
                             <input type="text" id="fibra" placeholder="MM - 50 x 125µm">
                             <label for="nfibra" class="d-block">Número de fibras:</label>
-                            <input type="text" id="nfibra" placeholder="8">
+                            <input type="number" id="nfibra" placeholder="8" min="1">
 
                             <label for="backboneS" class="d-block">Backbone Secundário?</label>
-                            
+
                             <input type="radio" value="true" name="backboneS" id="sim2">
                             <label for="sim2">Sim</label>
 
                             <input type="radio" value="false" name="backboneS" id="nao2" checked>
                             <label for="nao2">Não</label>
+                            <div id="teste-backbone2" class="sumir">
+                                <label for="fibra2" class="d-block">Tipo de fibra (Backbone Primário):</label>
+                                <input type="text" id="fibra2" placeholder="SM - 9 x 125µm">
+                                <label for="nfibra2" class="d-block">Número de fibras (Backbone Primário):</label>
+                                <input type="number" id="nfibra2" placeholder="8" min="1">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,9 +84,9 @@
                     <div class="col form d-flex align-items-center flex-column">
                         <div class="centralizar">
                             <label for="pontos" class="d-block">Altura do andar (m):</label>
-                            <input type="number"  id="altura" placeholder="5">
+                            <input type="number" id="altura" placeholder="5">
                             <label for="pontos" class="d-block">Número de pontos:</label>
-                            <input type="number"  id="pontos" placeholder="90">
+                            <input type="number" id="pontos" placeholder="90">
                             <label for="pontos" class="d-block">Medida média Malha Horizontal:</label>
                             <input type="number" id="m-h" placeholder="10">
                             <input type="button" value="SALVAR" id="salvar" class="d-block">
@@ -88,75 +94,103 @@
                     </div>
                 </div>
                 <div class="slide quatro">
-                    <div class="row materiais">
-                        <div class="col item">
-                            <div>Cabo par trançado</div>
-                            <div>Tomada RJ45 Fêmea</div>
-                            <div>Espelhos 4x4 - 2 furações/entradas</div>
-                            <div>Patch Cord, azul, 3m</div>
-                            <div>Patch Panel, 24 portas (PPMH - Patch de Malha Horizontal)</div>
-                            <div>Organizador de cabo frontal - 1U</div>
-                            <div>Patch Cable, azul - 2,5m</div>
-                            <div>Rack fechado, largura de 19"</div>
-                            <div>Bandeja fixa</div>
-                            <div>Exaustor 19"</div>
-                            <div>Switch</div>
-                            <div>Cabo de Fibra Óptica Tight Buffer (FOMMIG)</div>
-                            <div>Chassi DIO (Distribuido Interno Óptico) com 24 portas - 1U - 19"</div>
-                            <div>Acoplador óptico - LC - duplo</div>
-                            <div>Bandeja para emenda de fibra no DIO - (comporta até 12 emendas)</div>
-                            <div>Terminador Óptico para 8 fibras</div>
-                            <div>Pig tail - 1,5m - simples - conector LC</div>
-                            <div>Pig tail - 3,0m - duplo - conector LC</div>
-                            <div>Cordão Óptico- 3m - duplo - conector LC</div>
-                            <div>Rack fechado, largura de 19"</div>
-                            <div>Switch Óptico</div>
-                            <div>Etiquetas de identficação da porta do Patch Panel</div>
-                            <div>Etiquetas de identficação Patch Cable</div>
-                            <div>Etiquetas de identficação do Patch Panel</div>
-                            <div>Etiquetas de identificação Tomadas e Espelhos</div>
-                            <div>Etiquetas de identificação Cabos UTP - MH</div>
-                            <div>Etiqueta para os cordões ópticos e pigtail´s (TO)</div>
-                            <div>Etiqueta para Portas do DIO</div>
-                            <div>Abraçadeiras plásticas, pacote 100 unidades</div>
-                            <div>Porca Gaiola - pacote com 10 unidades</div>
-                            <div>Filtro de Linha - 6 portas</div>
+                    <div class="materiais">
+                        <section class="header">
+                            <span>ITEM</span><span>QUANTIDADE</span>
+                        </section>
+                        <div>
+                            <span class="alterar">Cabo par trançado</span><span class="resultado"></span>
                         </div>
-                        <div class="col resultado">
-                            <div>53</div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                        <div>
+                            <span class="alterar">Tomada RJ45 Fêmea</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Espelhos 4x4 - 2 furações/entradas</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Patch Cord, azul, 3m</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Patch Panel, 24 portas (PPMH - Patch de Malha Horizontal)</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Organizador de cabo frontal - 1U</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Patch Cable, azul - 2,5m</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Bandeja fixa</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Exaustor 19"</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Switch - 24 Portas + Portas ópticas</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Cabo de Fibra Óptica Tight Buffer</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Chassi DIO (Distribuido Interno Óptico) com 24 portas - 1U - 19"</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Acoplador óptico - SC - simples</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Bandeja para emenda de fibra no DIO - (comporta até 12 emendas)</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Terminador Óptico para 8 fibras</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Pig tail - 1,5m - simples - conector SC</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Pig tail - 1,5m - simples - conector SC</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Pig tail - 3,0m - simples - conector SC</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Cordão Óptico- 5m - simples - conector SC</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Cordão Óptico- 5m - simples - conector SC</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span class="alterar">Cordão Óptico- 10m - simples - conector SC</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Switch Core - 48 portas</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Etiquetas de identficação da porta do Patch Panel</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Etiquetas de identficação do Patch Panel</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Etiquetas de identificação Tomadas e Espelhos</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Etiquetas de identificação Cabos UTP - MH</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Etiqueta para Portas do DIO</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Abraçadeiras plásticas, pacote 100 unidades</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Porca Gaiola - pacote com 10 unidades</span><span class="resultado"></span>
+                        </div>
+                        <div>
+                            <span>Filtro de Linha - 6 portas</span><span class="resultado"></span>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
     </main>
